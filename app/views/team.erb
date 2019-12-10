@@ -1,3 +1,12 @@
+<h1><%= @name %></h1>
+<h2>Team Motto: <%= @motto %></h2>
 
 
-
+<% @super_heros.each do |members| %>
+  <% member_name = members[:name] %>
+  <% member_power = members[:power] %>
+  <% member_bio = members[:bio] %>
+  <h2><%= "Hero Name: #{member_name}" %></h2>
+  <p><%= "Hero Power: #{member_power}" %></p>
+  <p><%= "Hero Biography: #{member_bio}" %></p>
+  <% end %>
